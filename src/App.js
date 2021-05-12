@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Modal from "./portals/Modal";
+import { useState } from "react";
 
 function App() {
+  const [isOpen, setOpen] = useState(true);
+  const toggler = () => setOpen(!isOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button className="button" onClick={toggler}>
+        Mostar modal
+      </button>
+
+      <Modal {...{ isOpen, toggler }} />
+    </>
   );
 }
 
