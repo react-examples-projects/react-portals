@@ -23,7 +23,7 @@ npm run start
 ```sh
 npm run test
 ```
-
+ 
 ## Preview
 ![React portal modal preview](https://i.imgur.com/Sj8frhg.png)
 
