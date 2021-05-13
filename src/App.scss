@@ -28,6 +28,11 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
   color: rgba(0, 0, 0, 0.883);
 
+  .button:disabled,
+  input:disabled {
+    cursor: not-allowed;
+  }
+
   .modal-header {
     display: flex;
     justify-content: space-between;
@@ -59,7 +64,7 @@ body {
       margin-bottom: 1rem;
     }
 
-    input {
+    .modal-input {
       display: block;
       width: 100%;
       padding: 0.8rem;
@@ -106,6 +111,10 @@ body {
     &.success {
       background-color: #ff7b54;
       color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0.5;
     }
   }
 }
