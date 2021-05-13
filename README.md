@@ -24,6 +24,9 @@ npm run start
 npm run test
 ```
 
+## Demo
+[Preview](https://amazing-panini-c5624c.netlify.app/)
+
 ## Author
 
 👤 **Libardo Rengifo**
