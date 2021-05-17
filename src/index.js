@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import Routers from "./Routers";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 export const client = new QueryClient({
@@ -16,7 +16,7 @@ export const client = new QueryClient({
 ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={client}>
-      <App />
+      <Routers />
     </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")

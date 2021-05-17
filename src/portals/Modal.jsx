@@ -1,8 +1,10 @@
 import { createPortal } from "react-dom";
 import { BiArrowBack, BiX } from "react-icons/bi";
 import { useState } from "react";
-
-function Modal({ toggler, isLoading, isError, data }) {
+import { useQuery } from "react-query";
+import { getCountries } from "../helpers/requests";
+function Modal({ toggler }) {
+  const { isLoading, data } = useQuery("countries", getCountries);
   const [form, setForm] = useState({
     email: "",
     country: "",
